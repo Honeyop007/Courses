@@ -16,8 +16,8 @@ const Contact = () => {
   useEffect(() => {
     const fetchCourses = async () => {
       try {
-        const responseCourses = await axios.get('http://localhost:5000/courses/level/normal');
-        const responseAdvancedCourses = await axios.get('http://localhost:5000/courses/level/advance');
+        const responseCourses = await axios.get('https://codecraftacademey.onrender.com/courses/level/normal');
+        const responseAdvancedCourses = await axios.get('https://codecraftacademey.onrender.com/courses/level/advance');
         setCourses(responseCourses.data); // Regular courses
         setAdvancedCourses(responseAdvancedCourses.data); // Advanced courses
       } catch (err) {
@@ -41,7 +41,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/send-email', formData);
+      const response = await axios.post('https://codecraftacademey.onrender.com/send-email', formData);
       alert('Enrollment submitted successfully!');
     } catch (error) {
       alert('Error submitting enrollment');

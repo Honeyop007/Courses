@@ -9,7 +9,7 @@ const Courses = () => {
   useEffect(() => {
     const fetchCourses = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/courses/level/normal'); // Use Axios to fetch data
+        const response = await axios.get('https://codecraftacademey.onrender.com/courses/level/normal'); // Use Axios to fetch data
         setCourses(response.data); // Set the response data
       } catch (err) {
         setError('Failed to fetch courses'); // Set error message
